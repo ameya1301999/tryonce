@@ -1,0 +1,48 @@
+<!-- <h1>Login Form</h1>
+<p>reactiveform works!</p> -->
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:100,300,500">
+      <title>Transparent Login Form</title>
+  </head>
+  
+  
+  <div class="full-screen-container">
+  <div class="login-container">
+    <h1 style="text-align: center;">Application Form</h1>
+  <h3 class="login-title">Identity Details</h3>
+  <!-- userform is used for binding -->
+  <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+  
+  <!-- <div *ngIf="userForm.controls['email'].hasError('required')" class="alert alert-danger">
+    Please enter your email
+  </div> -->
+  
+   
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>Aadhar Number</label>
+    </div>
+    <input type="number" class="form-control" [(ngModel)]="identity1.aadharNumber" formControlName="aadharnumber" placeholder="Please enter your Aadhar Number">
+  </div>
+  
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>Pan Number</label>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="identity1.panNumber" formControlName="pannumber" placeholder="Please enter your Pan Number">
+  </div>
+  
+
+  
+  
+  
+  <!-- <div *ngIf="userForm.controls['password'].hasError('minlength')" class="alert alert-danger">
+    Your password should contain atleast 5 characters
+  </div> -->
+  <br/>
+  <button type="submit"   [disabled]="!myReactiveForm.valid" class="btn btn-primary">Submit</button>
+  
+  
+  </form>
+  </div>
+  </div>

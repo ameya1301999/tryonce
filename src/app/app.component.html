@@ -1,0 +1,32 @@
+<!-- <app-eligibility></app-eligibility> -->
+<!-- <app-identitydetails></app-identitydetails> 
+<app-personaldetails></app-personaldetails> -->
+
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+
+<!-- The routed views render in the <router-outlet>-->
+    
+<router-outlet></router-outlet>
+<p class="mainhead" style="text-align: center;">VEHICLE LOAN </p>
+<div class="topnav">
+  <a class="active" href="#home"><b>VEHICLE LOAN</b> - Home</a>
+  <a class="line" routerLink="eligibility">EMI Calculator</a>
+  <a class="line" routerLink="login">Login</a>
+  <a class="line" routerLink="signup">Sign Up</a>
+  <a class="line" routerLink="">About Us</a>
+  <a class="line" routerLink="adminlogin" style="float:right"><b>Admin Portal</b></a>
+</div>
+
+<div class="fling-minislide">
+    <img src="https://images.moneycontrol.com/static-mcnews/2017/12/Rubique-Carloan-3-653x435.jpg?impolicy=website&width=770&height=431" alt="Slide 4" />
+  
+    <img src="https://i0.wp.com/gomechanic.in/blog/wp-content/uploads/2020/07/Check-Your-Car-Loan-Eligibility-Now.jpg?fit=2433%2C1251&ssl=1" alt="Slide 2" />
+  
+    <img src="https://www.indusind.com/iblogs/wp-content/uploads/Best-Car-Loan-Online-IndusInd-Bank.jpg" alt="Slide 1" />
+  </div>
+      
+      
+  
+    <div>
+      <router-outlet></router-outlet>
+      </div>

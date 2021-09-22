@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-2 col-12"></div>
+        <div class="col-md-8 col-12">
+            
+            <form #myForm=ngForm>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="box">
+                          <h3 class="mb-3" style="text-align: center;">Admin Login</h3>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="Admin user id">Admin User Id</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="amt" name="username" [(ngModel)]="username" req class="form-control" placeholder="Enter user id" required/>
+                                    
+                                  </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="interest-rate">Admin Password</label>
+                                    
+                                </div>
+                                <div class="col-6">
+                                    <input type="password" id="intr" name="password" [(ngModel)]="password" required class="form-control" placeholder="Enter password" required/>
+                                    
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="text-center mb-3 mt-2">
+                    <button class="btn btn-primary" (click)="login()" class="btn btn-success" type="submit">Login</button>
+                </div>
+                
+            </form>
+        </div>
+        <div class="col-md-2 col-12"></div>
+    </div>
+  </div>
+  

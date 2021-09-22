@@ -1,0 +1,240 @@
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-2 col-12"></div>
+        <div class="col-md-8 col-12">
+            <h2 class="mb-3" style="text-align: center;">Eligibility Form</h2>
+            <form [formGroup]="eligibilityForm" #myForm=ngForm (ngSubmit)="saveData()">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="box">
+                            <h3 class="mb-3">Vehicle Details</h3>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="brand-name"> Brand Name</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="brandname" type="text" id="brand-name" name="brand-name" class="form-control" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('brandname')?.touched && eligibilityForm.get('brandname')?.invalid}" placeholder="Enter brand name" required/>
+                                    <div class="invalid-feedback">
+                                        <div>Brand Name is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="model-numer"> Model Number</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="modelno" type="text" id="model-numer" name="model-numer" class="form-control"
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('modelno')?.touched && eligibilityForm.get('modelno')?.invalid}" placeholder="Enter model number" required/>
+                                    <div class="invalid-feedback">
+                                        <div>Model Number is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="ex-showroom-price"> Ex-Showroom Price</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="exprice" type="text" id="ex-showroom-price" name="ex-showroom-price" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('exprice')?.touched && eligibilityForm.get('exprice')?.invalid}" class="form-control" placeholder="Enter ex-showroom price" required/>
+                                    <div class="invalid-feedback">
+                                        <div>Ex-Showroom Price is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="onroad-price"> On Road Price</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="onprice" type="text" id="onroad-price" name="onroad-price" class="form-control" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('onprice')?.touched && eligibilityForm.get('onprice')?.invalid}" placeholder="Enter on road price" required/>
+                                    <div class="invalid-feedback">
+                                        <div>On Road Price is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="box">
+                            <h3 class="mb-3">Applicant Details</h3>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="first-name"> First Name</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="firstname" minlength="4" type="text" id="first-name" name="first-name" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('firstname')?.touched && eligibilityForm.get('firstname')?.invalid}" class="form-control" placeholder="Enter firstname" [(ngModel)]="elig.fname" required/>
+                                    <div class="invalid-feedback">
+                                        <div>First Name is required</div>
+                                        <div>Minimum length of 4 is required</div>
+                                    </div> 
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="middle-name"> Middle Name</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="middle-name" name="middle-name" class="form-control" placeholder="Enter middlename" [(ngModel)]="elig.mname" required/>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="last-name"> Last Name</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="lastname" type="text"  id="last-name" name="last-name" class="form-control" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('lastname')?.touched && eligibilityForm.get('lastname')?.invalid}" placeholder="Enter lastname" [(ngModel)]="elig.lname" required/>
+                                    <div class="invalid-feedback">
+                                        <div>Last Name is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="age"> Age</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="age" type="number" id="age" name="age" class="form-control"
+                                     [ngClass]="{'is-invalid': eligibilityForm.get('age')?.touched && eligibilityForm.get('age')?.invalid}" placeholder="Enter age" [(ngModel)]="elig.age" required/>
+                                <div class="invalid-feedback">
+                                    <div>Age is required</div>
+                                </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="gender" formControlName="gender"> Gender</label>
+                                </div>
+                                <div class="col-6">
+                                    <span class="mr-3"><input type="radio" class="mr-1" name="gender" id="gender" [(ngModel)]="elig.gender" required>Male</span>
+                                    <span class="mr-3"><input type="radio" class="mr-1" name="gender" id="gender" [(ngModel)]="elig.gender" required>Female</span>
+                                    <span class="mr-3"><input type="radio" class="mr-1" name="gender" id="gender" [(ngModel)]="elig.gender" required>Others</span>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="employment-status"> Employment Status</label>
+                                </div>
+                                <div class="col-6">
+                                    <select formControlName="employmentStatus" name="employment-status" class="form-control" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('employmentStatus')?.touched && eligibilityForm.get('employmentStatus')?.invalid}" id="employment-status" [(ngModel)]="elig.employment" required>
+                                        <option value="" selected disabled="disabled">--select--</option>
+                                        <option value="employed">Employed</option>
+                                        <option value="selfemployed">Unemployed</option>
+                            
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        <div>Employment Status is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+
+
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="employment-type"> Employment Type</label>
+                                </div>
+                                <div class="col-6">
+                                    <select formControlName="employmentType" name="employment-type" class="form-control" id="employment-type" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('employmentType')?.touched && eligibilityForm.get('employmentType')?.invalid}" [(ngModel)]="elig.typeofemployment" required>
+                                        <option value="" selected disabled="disabled">--select--</option>
+                                        <option value="employed">Businessman</option>
+                                        <option value="selfemployed">Self-Employed</option>
+                                        <option value="outofwork">Out of Work</option>
+                                        <option value="student">Student</option>
+                                        <option value="retired">Retired</option>
+                                        <option value="unabletow">Service</option>
+                                        <option value="unabletow">Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        <div>Employment Type is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="anualincome"> Annual Income</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="income" type="number" id="annualincome" name="an" class="form-control" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('income')?.touched && eligibilityForm.get('income')?.invalid}" placeholder="Enter annual income" [(ngModel)]="elig.annualincome" required/>
+                                    <div class="invalid-feedback">
+                                        <div>Annual Income is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="exemi">Existing EMI</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" id="exemi" name="exemi" class="form-control" placeholder="Enter existing EMI if any" [(ngModel)]="elig.existingemi" required/>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="box">
+                            <h3 class="mb-3">Contact Details</h3>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="mobile-number"> Mobile Number</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="mobileno" type="number" id="mobile-number" pattern="^[6-9]\d{9}$" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('modelno')?.touched && eligibilityForm.get('mobileno')?.invalid}" name="mobile-number" class="form-control" placeholder="Enter mobile number" [(ngModel)]="elig.mobileno" required/>
+                                    <div class="invalid-feedback">
+                                        <div>Mobile Number is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="email"> Email ID</label>
+                                </div>
+                                <div class="col-6">
+                                    <input formControlName="email" type="email" id="email" 
+                                    [ngClass]="{'is-invalid': eligibilityForm.get('email')?.touched && eligibilityForm.get('email')?.invalid}" pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$" name="email" class="form-control" placeholder="Enter email ID" [(ngModel)]="elig.emailid" required/>
+                                    <div class="invalid-feedback">
+                                        <div>Email Id is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mb-3 mt-2">
+                    <button (click)="checkEligibililty()" class="btn btn-primary" type="submit">Check Eligibility</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2 col-12"></div>
+    </div>
+</div>

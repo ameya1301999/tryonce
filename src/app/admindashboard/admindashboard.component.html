@@ -1,0 +1,41 @@
+<html>
+
+<body>
+<h3 id=heading><b>Admin Dashboard</b></h3>
+<h4 id=subheading>List of Customers who applied for Loan</h4>
+<table id="customers" class="center">
+  <thead>
+  <tr>
+    <th>Customers_ID</th>
+    <th>First_Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>State</th>
+    <th>City</th>
+   <!-- <th>Aadhar_Number</th>
+    <th>Pan_Number</th> -->
+    <th>Accept Application</th>
+    <th>Reject Application</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor= "let customer of customers" >
+    <td>{{customer.customerId}}</td>
+    <td>{{customer.firstName}}</td>
+    <td>{{customer.age}}</td>
+    <td>{{customer.gender}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.mobile}}</td>
+    <td>{{customer.state}}</td>
+    <td>{{customer.city}}</td>
+    
+    <td><button class="btn btn-success" type="submit">Accept</button></td>
+    <td><button class="btn btn-danger" type="submit">Reject</button></td>
+  </tr>
+</tbody>
+</table>
+<div><button class="btn btn-success" id="button" routerLink="/logout" class="nav-link">Log-out</button></div>
+</body>
+</html>

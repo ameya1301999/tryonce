@@ -1,0 +1,90 @@
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-2 col-12"></div>
+      <div class="col-md-8 col-12">
+          <h2 class="mb-3" style="text-align: center;">Loan Offer</h2>
+          <form #myForm=ngForm>
+              <div class="row mb-3">
+                  <div class="col-12">
+                      <div class="box">
+                        <h3 class="mb-3" style="text-align: center;">Choose the best Loan Offer </h3>
+                          <div class="row mb-2">
+                              <div class="col-3">
+                                  <label for="loan-amount-required">Loan Amount Required</label>
+                              </div>
+                              <div class="col-6">
+                                  <input [(ngModel)]='loan' #un="ngModel" type="number" (change)="operation(loan)" id="amt" name="amt" class="form-control" placeholder="Enter loan amount required" required/>
+                                  <div *ngIf="un.invalid && (un.dirty || un.touched)" style="color: red;">
+                                    <div *ngIf="un.errors?.required">Loan Amount Required</div>
+                                    
+                                </div>
+                                </div>
+                              <div class="col-3"></div>
+                          </div>
+                          <div class="row mb-2">
+                              <div class="col-3">
+                                  <label for="interest-rate">Rate of Interest per month(%)</label>
+                                  
+                              </div>
+                              <div class="col-6">
+                                  <input disabled type="text" id="intr" [(ngModel)]='intrestRate' name="intr" class="form-control" required/>
+                                  
+                              </div>
+                              <div class="col-3"></div>
+                          </div>
+                          <div class="row mb-2">
+                            <div class="col-3">
+                                <label for="emi">Tenure of loan in months</label>
+                            </div>
+                            <div class="col-6">
+                                <input disabled type="number" [(ngModel)]='loantenure' id="tenure" name="tenure" class="form-control" required/>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+                          <div class="row mb-2">
+                              <div class="col-3">
+                                  <label for="emi">EMI</label>
+                              </div>
+                              <div class="col-6">
+                                  <input disabled type="number" [(ngModel)]='emi' id="emi" name="emi" class="form-control" required/>
+                              </div>
+                              <div class="col-3"></div>
+                          </div>
+                          <div class="row mb-2">
+                              <div class="col-3">
+                                  <label for="processingfee">Processing Fees in Rupees</label>
+                              </div>
+                              <div class="col-6">
+                                  <input disabled type="number" id="pfees" [(ngModel)]='profee' name="pfees" class="form-control" required/>
+                              </div>
+                              <div class="col-3"></div>
+                          </div>
+
+                          <div class="row mb-2">
+                            <div class="col-3">
+                                <label for="account-type"> Account Type</label>
+                            </div>
+                            <div class="col-6">
+                                <select name="account-type" class="form-control" id="account-type" required>
+                                    <option value="" selected disabled="disabled">--select--</option>
+                                    <option value="savings">Savings</option>
+                                    <option value="current">Current</option>
+                        
+                                </select>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              
+              
+              <div class="text-center mb-3 mt-2">
+                  <button class="btn btn-primary" (click)="redirect()" type="submit">Apply Now</button>
+              </div>
+              
+          </form>
+      </div>
+      <div class="col-md-2 col-12"></div>
+  </div>
+</div>

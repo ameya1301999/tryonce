@@ -1,0 +1,93 @@
+/* * {
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  html,
+  body {
+    margin: 0;
+  }
+  
+  .full-screen-container {
+    background-image: url("https://imgcdnblog.carmudi.com.ph/wp-content/uploads/2017/07/21112246/Car_refinancing-1.jpg");
+    height: auto;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    background-color: hsla(201, 100%, 6%, 0.6);
+    padding: 50px 30px;
+    min-width: 400px;
+    width: 60%;
+    margin-top: 100px;
+    max-width: 600px;
+  }
+  
+  .login-title {
+    color: white;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    color: white;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin-bottom: 7px;
+  }
+  
+  .input-group input {
+    font-size: 1.5em;
+    padding: 0.1em 0.25em;
+    background-color: hsla(201, 100%, 91%, 0.3);
+    border: 1px solid hsl(201, 100%, 6%);
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: lighter;
+  }
+  
+  .input-group input:focus {
+    border: 1px solid hsl(201, 100%, 50%);
+  }
+  
+  .login-button {
+    padding: 10px 30px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: hsla(201, 100%, 50%, 0.1);
+    border: 1px solid hsl(201, 100%, 50%);
+    outline: none;
+    font-size: 1.5em;
+    color: white;
+    font-weight: lighter;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: hsla(201, 100%, 50%, 0.3);
+  }
+  
+  .login-button:focus {
+    background-color: hsla(201, 100%, 50%, 0.5);
+  }
+  
+  input.ng-touched.ng-invalid {
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset rgba(255, 0, 0, 0.2);
+  } */

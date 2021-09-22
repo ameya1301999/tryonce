@@ -1,0 +1,50 @@
+<p class="mainhead" style="text-align: center;">VEHICLE LOAN </p>
+<div class="topnav">
+  <a class="active" routerLink="signup"><b>VEHICLE LOAN</b> - Home</a>
+  <a class="line" routerLink="eligibility">EMI Calculator</a>
+  <a class="line" routerLink="login">Login</a>
+  <a class="line" routerLink="signup">Sign Up</a>
+  <a class="line" routerLink="">About Us</a>
+  <a class="line" routerLink="admin" style="float:right"><b>Admin Portal</b></a>
+</div>
+
+<div class="fling-minislide">
+  <img src="https://images.moneycontrol.com/static-mcnews/2017/12/Rubique-Carloan-3-653x435.jpg?impolicy=website&width=770&height=431" alt="Slide 4" />
+
+  <img src="https://i0.wp.com/gomechanic.in/blog/wp-content/uploads/2020/07/Check-Your-Car-Loan-Eligibility-Now.jpg?fit=2433%2C1251&ssl=1" alt="Slide 2" />
+
+  <img src="https://www.indusind.com/iblogs/wp-content/uploads/Best-Car-Loan-Online-IndusInd-Bank.jpg" alt="Slide 1" />
+</div>
+
+<br>
+
+  <div class="container">
+    <h2>SignUp!</h2>
+   
+    <form #SignUpForm="ngForm" (ngSubmit)="SignUp()">
+        <div class="form-group">
+            <label for="email">ID:</label>
+            <input type="email" class="form-control"  placeholder="Enter ID" name="eid" [(ngModel)]=user.id required ngModel>
+        </div>
+        <br>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control"  placeholder="Enter email" name="email" [(ngModel)]=user.emailId required ngModel>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" class="form-control"  placeholder="Enter User Name" name="pwd"  [(ngModel)]=user.userName required ngModel>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control"  placeholder="Enter password" name="pwd"  [(ngModel)]=user.password required ngModel>
+      </div>
+      <br>
+      <input type="submit" class="btn btn-info" value="Signup" [disabled]="!SignUpForm.valid" >
+    </form>
+    <small [routerLink]="['/login']">Existing user? LOG IN!</small>
+  </div>
+  <br>
+  <br>

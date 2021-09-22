@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+
+
+.sidebar {
+  height: 100%;
+  width: 165px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 0px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+ 
+<div class="sidebar">
+  <a ><i class="fa fa-fw"></i>Dashboard</a>
+  <a><i class="fa fa-fw "></i>Clients</a>
+  <a (click)="login1()"><i class="fa fa-fw"></i>Application</a>
+  <a><i class="fa fa-fw "></i>Rejected List</a>
+  <a routerLink="/logout" class="nav-link"><i class="fa fa-fw "></i>Log-out</a>
+</div>
+<div class="logout">
+ 
+</div>
+
+<div class="main">
+  <h2 style="text-align: center; padding-top: 20px;">Admin Dashboard</h2>
+  <p style="text-align: center; padding-top: 10px;">Welcome to Admin Area.</p>
+  
+  
+</div>
+     
+</body>
+</html> 
+

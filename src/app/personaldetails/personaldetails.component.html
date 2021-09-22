@@ -1,0 +1,92 @@
+
+<!-- <h1>Login Form</h1>
+<p>reactiveform works!</p> -->
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:100,300,500">
+      <title>Transparent Login Form</title>
+  </head>
+  
+  
+  <div class="full-screen-container">
+  <div class="login-container">
+    <h1 style="text-align: center;">Application Form</h1>
+  <h3 class="login-title">Personal Details</h3>
+  
+  <!-- userform is used for binding -->
+  <form [formGroup]="personalForm" (ngSubmit)="onSubmit()">
+  
+  <!-- <div *ngIf="userForm.controls['email'].hasError('required')" class="alert alert-danger">
+    Please enter your email
+  </div> -->
+  
+   
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>Customer_Id</label>
+    </div>
+    <input type="number" class="form-control" [(ngModel)]="personalDetails.customerId" formControlName="customerId" placeholder="Please enter your ID">
+  </div>
+  
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>First_Name</label>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="personalDetails.firstName" formControlName="firstName" placeholder="Please enter your firstname">
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>Age</label>
+    </div>
+    <input type="number" class="form-control" [(ngModel)]="personalDetails.age" formControlName="age" placeholder="Please enter your age">
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>Gender</label>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="personalDetails.gender" formControlName="gender" placeholder="Please enter your gender">
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>Email</label>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="personalDetails.email" formControlName="email" placeholder="Please enter your Email">
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>Mobile Number</label>
+    </div>
+    <input type="number" class="form-control" [(ngModel)]="personalDetails.mobile" formControlName="mobile" placeholder="Please enter your Mobile Number">
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>State</label>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="personalDetails.state" formControlName="state" placeholder="Please enter your State">
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+    <label><br>City</label>
+    </div>
+    <input type="text" class="form-control" [(ngModel)]="personalDetails.city" formControlName="state" placeholder="Please enter your City">
+  </div>
+  
+
+  
+  
+  
+  <!-- <div *ngIf="userForm.controls['password'].hasError('minlength')" class="alert alert-danger">
+    Your password should contain atleast 5 characters
+  </div> -->
+  <br/>
+  <button type="submit"   [disabled]="personalForm.valid" class="btn btn-primary">Submit</button>
+  
+  
+  </form>
+  </div>
+  </div>
